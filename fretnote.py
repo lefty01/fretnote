@@ -72,9 +72,9 @@ astring = String("A", (2,3,5,7,8,10,12), ('B','C','D','E','F','G','A'))
 # todo: other strings, decrement timeout, run as long as answer is correct
 
 points = 0
-rounds = 10
+rounds = 20
 for n in range(1, rounds):
-    points += learnNote(estring, initial_timeout)
+    points += learnNote(random.choice((estring, astring)), initial_timeout)
 
 
 print("points: %d out of %d" % (points, rounds))
